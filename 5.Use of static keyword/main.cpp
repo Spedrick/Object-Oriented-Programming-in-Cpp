@@ -2,15 +2,15 @@
 using namespace std;
 
 class Yuvraj
-{
-private:
-    int rollNo = 66;
+{    
 public:
+    int rollNo = 66;
+
     void setRollNo(int rollNo)
     {
         this->rollNo = rollNo;
     }
-    static void printRollNo()
+    void printRollNo()
     {
         cout << rollNo << endl;
         return;
@@ -20,8 +20,10 @@ public:
 int main(void)
 {
     Yuvraj me;
+    static int tempRoll = me.rollNo;
     me.setRollNo(100);
     me.printRollNo();
+    cout << tempRoll << endl;
     return 0;
 }
 
